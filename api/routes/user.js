@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+const ds18b20 = require('ds18b20-raspi');
+
 
 const User = require('../models/user');
 
@@ -111,7 +113,15 @@ router.delete("/:userId", (req, res, next) => {
   });
 
 
-
+router.get('/gettepm', (req, res, next) => {
+    sensor.readSimpleC((err, temp) =>{
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('${temp} degC');
+        }
+    });
+});
 
 
 module.exports = router;
