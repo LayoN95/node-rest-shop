@@ -117,6 +117,7 @@ router.get('/gettepm', (req, res, next) => {
     sensor.readSimpleC((err, temp) =>{
         if (err) {
             console.log(err);
+            console.log("Brak urządzenia");
         } else {
             console.log('${temp} degC');
         }
