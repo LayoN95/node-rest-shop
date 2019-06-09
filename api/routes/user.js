@@ -119,7 +119,10 @@ router.get('/gettepm', (req, res, next) => {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-            console.log(`${temp} degC`);
+            res.status(200).json({
+                message: `${temp} degC`
+            });
+            
         }
     });
 });
