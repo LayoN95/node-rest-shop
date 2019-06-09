@@ -3,8 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
-const ds18b20 = require('ds18b20-raspi');
+const getTemp = require('../middleware/get-temp');
 
 
 const User = require('../models/user');
