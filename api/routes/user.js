@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const getTemp = require('../middleware/get-temp');
+const ds18b20 = require('ds18b20-raspi');
+
 
 
 const User = require('../models/user');
