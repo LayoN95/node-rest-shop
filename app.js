@@ -3,6 +3,9 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
+var path = require('path');
+var hbs = require('express-handlebars');
+
 const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
@@ -17,6 +20,11 @@ process.env.MONGO_ATLAS_PW +
 });
 
 mongoose.Promise = global.Promise;
+
+// view engine setup
+app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));

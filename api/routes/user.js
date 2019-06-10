@@ -113,18 +113,35 @@ router.delete("/:userId", (req, res, next) => {
 
 
 router.get('/gettepm', (req, res, next) => {
-    ds18b20.readSimpleC((err, temp) =>{
+    ds18b20.readSimpleC((err, temperature) =>{
         if (err) {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
             res.status(200).json({
-                message: `${temp} degC`
+                message: `${temperature} degC`
             });
             
         }
     });
 });
 
+
+router.get('/render', (req, res, next) => {
+    ds18b20.readSimpleC((err, temperature) =>{
+        if (err) {
+            console.log(err);
+            console.log("Brak urządzenia");
+        } else {
+            res.status(200).json({
+                message: `${temperature} degC`
+            });
+            
+        }
+    });
+    
+        res.render('index', {temp: temperature});
+    
+});
 
 module.exports = router;
