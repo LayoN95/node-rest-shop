@@ -130,13 +130,12 @@ router.get('/gettepm', (req, res, next) => {
 
 
 router.get('/render', (req, res, next) => {
-    ds18b20.readSimpleC((err, temp) =>{
+    ds18b20.readAllC(2, (err, temps) =>{
         if (err) {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-            temperature = temp;
-            res.render('index', {temp: temp});
+            res.render('index', {temp: temps});
             
         }
     });
