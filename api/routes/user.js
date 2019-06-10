@@ -137,12 +137,12 @@ router.get('/render', (req, res, next) => {
         } else {
             res.status(200).json({
                 message: `${temperature} degC`
-                
-            }).render('index', {temp: temperature});
+            });
             
         }
     });
     
+        res.render('index', {temp: temperature});
     
 });
 
