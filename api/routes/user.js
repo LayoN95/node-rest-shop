@@ -137,14 +137,12 @@ router.get('/render', (req, res, next) => {
             console.log("Brak urządzenia");
         } else {
             temperature = temp;
-            res.status(200).json({
-                message: `${temp} degC`
-            });
+            res.render('index', {temp: temperature});
             
         }
     });
     
-        res.render('index', {temp: temperature});
+        
     
 });
 
