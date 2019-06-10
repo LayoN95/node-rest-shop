@@ -129,7 +129,7 @@ router.get('/gettepm', (req, res, next) => {
 });
 
 
-router.get('/render', (req, res, next) => {
+/*router.get('/render', (req, res, next) => {
     ds18b20.readSimpleC((err, temp) =>{
         if (err) {
             console.log(err);
@@ -144,6 +144,6 @@ router.get('/render', (req, res, next) => {
     
         res.render('index', {temp: temperature});
     
-});
+});*/
 
 module.exports = router;
