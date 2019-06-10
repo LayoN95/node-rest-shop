@@ -115,7 +115,7 @@ router.delete("/:userId", (req, res, next) => {
 
 
 router.get('/gettepm', (req, res, next) => {
-    ds18b20.readSimpleC((err, temperature) =>{
+    ds18b20.readAllC((err, temperature) =>{
         if (err) {
             console.log(err);
             console.log("Brak urządzenia");
