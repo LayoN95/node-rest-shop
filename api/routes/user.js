@@ -136,7 +136,7 @@ router.get('/render', (req, res, next) => {
             console.log("Brak urządzenia");
         } else {
             temperature = temp;
-            res.status(200).render('index', {temp: temp});
+            res.render('index', {temp: temp});
             
         }
     });
