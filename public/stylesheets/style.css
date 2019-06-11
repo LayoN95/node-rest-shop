@@ -1,12 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #01a9d3;
+  background: #01a9d3;
 
 }
 
 a {
   color: #00B7FF;
+}
+h1 {
+  color: #e74c3c;
 }
 
 section {
