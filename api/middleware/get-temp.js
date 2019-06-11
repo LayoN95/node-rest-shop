@@ -10,9 +10,7 @@ module.exports = (req, res, next) => {
             console.log("Brak urządzenia");
         } else {
            
-           res.status(200).json({
-               message: temperature
-           });
+            res.render('index', {temp: temps});
         }
     });
     
