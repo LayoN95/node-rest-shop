@@ -130,7 +130,7 @@ router.get('/gettepm', (req, res, next) => {
 
 
 router.get('/render', (req, res, next) => {
-   ds18b20.readSimpleC(2, (err, temps) =>{
+   /*ds18b20.readSimpleC(2, (err, temps) =>{
         if (err) {
             console.log(err);
             console.log("Brak urządzenia");
@@ -138,8 +138,8 @@ router.get('/render', (req, res, next) => {
             res.render('index', {temp: temps});
             
         }
-    });
- 
+    });*/
+    console.log(getTemp.temp);
     
     
 });
