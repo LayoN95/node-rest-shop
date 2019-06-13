@@ -142,7 +142,6 @@ router.get('/render', (req, res, next) => {
         }
     });*/
     //getTemp.temp;
-    getTemp();
     console.log(getTemp.temp);
     res.render('index', {temp: getTemp.temp});
     
