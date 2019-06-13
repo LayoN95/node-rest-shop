@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const getTemp = require('../middleware/get-temp');
 const ds18b20 = require('ds18b20-raspi');
 
+const test = require('../middleware/test');
+
 
 
 const User = require('../models/user');
@@ -139,6 +141,8 @@ router.get('/render', (req, res, next) => {
             
         }
     });*/
+    //getTemp.temp;
+
     console.log(getTemp.temp);
     
     
