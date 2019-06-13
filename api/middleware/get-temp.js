@@ -6,8 +6,9 @@ var temp = 0;
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-            console.log(temperature);
+            console.log("temperature" + temperature);
             temp = temperature;
+            console.log("temp:" + temp);
         }
     });
     
