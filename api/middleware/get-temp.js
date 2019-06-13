@@ -1,6 +1,6 @@
 const ds18b20 = require('ds18b20-raspi');
 var temp = 0;
-
+function getTemp () {
     ds18b20.readSimpleC((err, temperature) =>{
         if (err) {
             console.log(err);
@@ -13,6 +13,7 @@ var temp = 0;
 
         }
     });
+}
     
-
+ 
 
