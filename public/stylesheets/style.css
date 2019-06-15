@@ -1,3 +1,12 @@
 .get {
   background: blue;
+
+}
+
+.temp {
+  background: green;
+  margin: auto;
+  width: 200px;
+  height: 30px;
+
 }
